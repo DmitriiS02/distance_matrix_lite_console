@@ -104,6 +104,8 @@ public class ApplicationMintrance {
                         System.out.println("\nФайл Пуст. Проверьте на содержание\n\n" + e);
                     } catch (POIXMLException e) {
                         System.out.println("\nНеверный формат входного файла, выберите .xlsx " + e);
+                    }catch (IllegalArgumentException e){
+                        System.out.println("\nВ выбранном файле отсутвует 2й лист");
                     }catch (Exception e) {
                         e.printStackTrace();
                         System.out.println("\nВозникла непредвиденная ошибка\n" + e);
@@ -127,7 +129,7 @@ public class ApplicationMintrance {
                         System.out.println("\n!!! Внимание !!! Лимит запросов на сегодня превышен!/ Слишком много запросов");
                         continue;
                     }catch (Exception e) {
-                        System.out.println("\nНе удалось установить соединение с Яндекс сервисом" + e);
+                        System.out.println("\nВозникла ошибка" + e);
                     }
 
 
@@ -276,7 +278,8 @@ public class ApplicationMintrance {
                 FileInputStream inputStream = new FileInputStream(executibleFile);
                 // Создаем экземпляр XSSFWorkbook с выбранным файлом
                 Workbook book = new XSSFWorkbook(inputStream);
-                Sheet sheet = book.getSheetAt(0); //TODO: Добавить второй лист.
+                Sheet sheet = book.getSheetAt(0);
+                Sheet sheetKilometers = book.getSheetAt(1);
                 DetectionOfLastRow(sheet);
                 try {
                     CountingGeneralCols(sheet);
@@ -325,6 +328,8 @@ public class ApplicationMintrance {
                 inputStream.close();
             } catch (IOException e) {
                 e.printStackTrace();
+            }catch(IllegalArgumentException e) {
+                throw new IllegalArgumentException(e);
             }catch (OutOfMemoryError e) {
                 System.out.println("Файл слишком велик, выберите меньший по размеру файл");
             }
