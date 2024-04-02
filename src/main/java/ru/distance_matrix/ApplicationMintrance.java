@@ -391,8 +391,6 @@ public class ApplicationMintrance {
         for (int i = startRow; i <= endRow; i++) {
             Row row = sheet.getRow(i);
             Cell cell = row.getCell(columnToCheck);
-            String test1= cell.getStringCellValue();
-            Boolean testb= test1.isBlank();
             if (cell==null||cell.getStringCellValue().isBlank()==true) {
                 rowToStart = i;
                 break;

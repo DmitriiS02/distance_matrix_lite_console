@@ -9,20 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3e1459b-21c8-433f-85a2-06bdba9c0350" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/distance_matrix_lite_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/distance_matrix/ApplicationMintrance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/distance_matrix/ColsMoreHundredException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/distance_matrix/HTTPForbiddenException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/distance_matrix/TooManyRequestsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/distance_matrix/UnauthorisedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+    <list default="true" id="d3e1459b-21c8-433f-85a2-06bdba9c0350" name="Changes" comment="My_first_commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/distance_matrix/ApplicationMintrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/distance_matrix/ApplicationMintrance.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +32,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TODO_SCOPE": "All Places",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/my_java/distance_matrix_lite",
     "node.js.detected.package.eslint": "true",
@@ -78,8 +68,18 @@
       <option name="presentableId" value="Default" />
       <updated>1711666377470</updated>
       <workItem from="1711666378518" duration="13356000" />
-      <workItem from="1711706193462" duration="13137000" />
+      <workItem from="1711706193462" duration="14678000" />
+      <workItem from="1712064276096" duration="422000" />
     </task>
+    <task id="LOCAL-00001" summary="My_first_commit">
+      <option name="closed" value="true" />
+      <created>1711996341734</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711996341734</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,6 +95,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="My_first_commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="My_first_commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
