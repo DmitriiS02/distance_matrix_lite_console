@@ -201,13 +201,14 @@ public class ApplicationMintrance {
 
                 connection.connect();
 
+
                 drawProgressBar(i + 1, requestArray.size());
 
                 StringBuilder responseBuilder = new StringBuilder();
 
                 if (HttpURLConnection.HTTP_UNAUTHORIZED == connection.getResponseCode()) {
                     throw new UnauthorisedException("");
-                } else if (HttpURLConnection.HTTP_OK == connection.getResponseCode()) {
+                } else if (200 == connection.getResponseCode()) {
                     BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                     String line;
                     while ((line = in.readLine()) != null) {
@@ -293,18 +294,20 @@ public class ApplicationMintrance {
                     StringBuilder requestBody = new StringBuilder();
 
                     Row curRowOrigin = sheet.getRow(rowOrig);
-                    Cell curCelLatOrigin = curRowOrigin.getCell(5);
-                    String latOrigin = curCelLatOrigin.getStringCellValue();
-                    Cell curCelLonOrigin = curRowOrigin.getCell(6);
-                    String lonOrigin = curCelLonOrigin.getStringCellValue();
+//                    Cell curCelLatOrigin = curRowOrigin.getCell(5);
+//                    String latOrigin = curCelLatOrigin.getStringCellValue();
+                    String latOrigin = curRowOrigin.getCell(5).toString().replaceAll("\\u00A0", "").trim();
+//                    Cell curCelLonOrigin = curRowOrigin.getCell(6);
+//                    String lonOrigin = curCelLonOrigin.getStringCellValue();
+                    String lonOrigin = curRowOrigin.getCell(6).toString().replaceAll("\\u00A0", "").trim();
 
                     requestBody.append("https://api.routing.yandex.net/v2/distancematrix?origins="+latOrigin+","+lonOrigin+"&destinations=");
                     //System.out.println(requestBody); //Смотриим на тело запросаа
                     for(int j = 9;j<generalColumns;j++){ //TODO: 23.03.2024
                         Row curRowDestinationLat = sheet.getRow(7);
                         Row curRowDestinationLon = sheet.getRow(8);
-                        String latDest = curRowDestinationLat.getCell(j).getStringCellValue();
-                        String lonDest = curRowDestinationLon.getCell(j).getStringCellValue();
+                        String latDest = curRowDestinationLat.getCell(j).toString().replaceAll("\\u00A0", "").trim();
+                        String lonDest = curRowDestinationLon.getCell(j).toString().replaceAll("\\u00A0", "").trim();
 //                        if ((latDest.equals(null) || lonDest.equals(null))||(latDest.isEmpty()||lonDest.isEmpty())) {
 //                            continue;
 //                        }
@@ -344,7 +347,7 @@ public class ApplicationMintrance {
 
         while(!rowEnded){
             Cell cell = row.getCell(cellIndex);
-            if(cell == null|| cell.getStringCellValue().toString()==""){
+            if(cell == null|| cell.toString().replaceAll("\\u00A0", "").trim().isBlank()==true){
                 break;
             }
             cellIndex++;
@@ -359,7 +362,7 @@ public class ApplicationMintrance {
     }
 
     public static void CountingRows(int countCols){
-        int limitOfDayRequest = 100000;
+        int limitOfDayRequest = 10000;
         int res;
         res = limitOfDayRequest/countCols;
         generalRows = res;
@@ -373,7 +376,7 @@ public class ApplicationMintrance {
                 break;
             }
             Cell cell = row.getCell(5); // По структуре ищем по колонке с северной широтой Структура
-            if(cell ==null||cell.getStringCellValue().isBlank() == true){
+            if(cell ==null||cell.toString().replaceAll("\\u00A0", "").trim().isBlank() == true){
                 break;
             }else {
                 localI++;
@@ -396,7 +399,7 @@ public class ApplicationMintrance {
         for (int i = startRow; i <= endRow; i++) {
             Row row = sheet.getRow(i);
             Cell cell = row.getCell(columnToCheck);
-            if (cell==null||cell.getStringCellValue().isBlank()==true) {
+            if (cell==null||cell.toString().replaceAll("\\u00A0", "").trim().isBlank()==true) {
                 rowToStart = i;
                 break;
             }

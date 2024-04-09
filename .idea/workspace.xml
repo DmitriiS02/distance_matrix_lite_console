@@ -12,6 +12,7 @@
     <list default="true" id="d3e1459b-21c8-433f-85a2-06bdba9c0350" name="Changes" comment="My_first_commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/distance_matrix/ApplicationMintrance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/distance_matrix/ApplicationMintrance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +70,11 @@
       <updated>1711666377470</updated>
       <workItem from="1711666378518" duration="13356000" />
       <workItem from="1711706193462" duration="14678000" />
-      <workItem from="1712064276096" duration="2687000" />
+      <workItem from="1712064276096" duration="3414000" />
+      <workItem from="1712094047215" duration="27000" />
+      <workItem from="1712137433009" duration="1576000" />
+      <workItem from="1712157814605" duration="1308000" />
+      <workItem from="1712580866476" duration="11891000" />
     </task>
     <task id="LOCAL-00001" summary="My_first_commit">
       <option name="closed" value="true" />
@@ -87,7 +92,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712065079763</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="My_first_commit">
+      <option name="closed" value="true" />
+      <created>1712084428120</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712084428120</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,13 +131,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/distance_matrix/ApplicationMintrance.java</url>
-          <line>279</line>
-          <option name="timeStamp" value="8" />
+          <line>139</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/distance_matrix/ApplicationMintrance.java</url>
-          <line>115</line>
-          <option name="timeStamp" value="10" />
+          <line>98</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
